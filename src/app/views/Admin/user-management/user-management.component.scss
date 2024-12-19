@@ -1,0 +1,81 @@
+.user-management {
+    background-color: #f4f6f9;
+  
+    .user-management-card {
+      border-radius: 12px;
+      border: none;
+    }
+  
+    .card-header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e9ecef;
+      padding: 1rem 1.5rem;
+    }
+  
+    .search-input {
+      max-width: 300px;
+      border-radius: 8px;
+      overflow: hidden;
+  
+      .input-group-text {
+        background-color: #f8f9fa;
+        border: none;
+      }
+    }
+  
+    .user-table {
+      thead {
+        background-color: #f1f3f7;
+        
+        th {
+          font-weight: 600;
+          color: #2c3e50;
+          vertical-align: middle;
+          padding: 1rem;
+          border-bottom: 2px solid #e9ecef;
+        }
+      }
+  
+      tbody {
+        tr {
+          transition: all 0.2s ease;
+          
+          &:hover {
+            background-color: rgba(0, 123, 255, 0.05);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+          }
+  
+          td {
+            vertical-align: middle;
+            padding: 1rem;
+          }
+        }
+      }
+  
+      .user-avatar {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+      }
+    }
+  
+    .badge {
+      padding: 0.5em 0.75em;
+      font-weight: 500;
+      border-radius: 4px;
+    }
+  
+    .btn-group {
+      .btn {
+        display: flex;
+        align-items: center;
+        
+        i {
+          margin-right: 4px;
+        }
+      }
+    }
+
+    
+}

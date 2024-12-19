@@ -1,12 +1,14 @@
-FROM node:alpine
+FROM node:22.11.0-alpine
 
 WORKDIR /app
 
+# Copy package files
 COPY package*.json ./
-
-RUN npm install -g @angular/cli
+# Install dependencies with verbose output
 RUN npm install
-
+# Copy entire project
 COPY . .
 
-CMD ["ng", "serve", "--host", "0.0.0.0", "--poll", "500", "--disable-host-check"]
+EXPOSE 4200
+
+CMD ["npx", "ng", "serve", "--host", "0.0.0.0", "--poll", "500", "--disable-host-check"]

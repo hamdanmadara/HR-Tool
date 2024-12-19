@@ -1,0 +1,60 @@
+<div class="sidebar-wrapper">
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <a href="#" class="sidebar-brand d-flex align-items-center">
+          <img src="assets/logo.png" alt="Company Logo" class="sidebar-logo">
+          <span class="brand-name">My App</span>
+        </a>
+        <button class="sidebar-toggle d-lg-none" (click)="toggleMobileSidebar()">
+          <i class="cil-hamburger-menu">cccccccccc</i>
+        </button>
+      </div>
+      
+      <div class="sidebar-menu">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">
+              <i class="cil-speedometer me-2"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/user-management" routerLinkActive="active">
+              <i class="cil-user me-2"></i>
+              <span>User Management</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/job-listings" routerLinkActive="active">
+              <i class="cil-briefcase me-2"></i>
+              <span>Job Listings</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/profile" routerLinkActive="active">
+              <i class="cil-settings me-2"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="sidebar-footer">
+        <div class="user-info d-flex align-items-center">
+          <img 
+            [src]="userAvatar || 'assets/img/avatars/default-avatar.png'" 
+            alt="User Avatar" 
+            class="user-avatar"
+          >
+          <div class="user-details">
+            <span class="user-name">{{ userName }}</span>
+            <span class="user-role">{{ userRole }}</span>
+          </div>
+        </div>
+        <button class="btn btn-logout" >
+          <i class="cil-account-logout me-2"></i>
+          Logout
+        </button>
+      </div>
+    </nav>
+  </div>
